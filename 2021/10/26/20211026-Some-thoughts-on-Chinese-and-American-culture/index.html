@@ -1,0 +1,234 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Some thoughts on Chinese and American culture | Lambert the Coder</title><meta name="author" content="Lambert Wang"><meta name="copyright" content="Lambert Wang"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="这里有东西被加密了，需要输入密码查看哦。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Some thoughts on Chinese and American culture">
+<meta property="og:url" content="https://blog.lambert.wang/2021/10/26/20211026-Some-thoughts-on-Chinese-and-American-culture/index.html">
+<meta property="og:site_name" content="Lambert the Coder">
+<meta property="og:description" content="这里有东西被加密了，需要输入密码查看哦。">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://blog.lambert.wang/images/blog-og.jpg">
+<meta property="article:published_time" content="2021-10-26T12:21:45.000Z">
+<meta property="article:modified_time" content="2021-10-26T12:21:45.000Z">
+<meta property="article:author" content="Lambert Wang">
+<meta property="article:tag" content="English">
+<meta property="article:tag" content="英语">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://blog.lambert.wang/images/blog-og.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Some thoughts on Chinese and American culture",
+  "url": "https://blog.lambert.wang/2021/10/26/20211026-Some-thoughts-on-Chinese-and-American-culture/",
+  "image": "https://blog.lambert.wang/images/avatar.jpg",
+  "datePublished": "2021-10-26T12:21:45.000Z",
+  "dateModified": "2021-10-26T12:21:45.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Lambert Wang",
+      "url": "https://blog.lambert.wang"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/images/favicon.png"><link rel="canonical" href="https://blog.lambert.wang/2021/10/26/20211026-Some-thoughts-on-Chinese-and-American-culture/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"No results found for: ${query}","hits_stats":"${hits} articles found"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Some thoughts on Chinese and American culture',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="Lambert the Coder" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/images/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">22</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">2</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Lambert the Coder</span></a><a class="nav-page-title" href="/"><span class="site-name">Some thoughts on Chinese and American culture</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  Back to Home</span></span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">Some thoughts on Chinese and American culture</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2021-10-26T12:21:45.000Z" title="Created 2021-10-26 20:21:45">2021-10-26</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2021-10-26T12:21:45.000Z" title="Updated 2021-10-26 20:21:45">2021-10-26</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/English-Study/">English Study</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><div class="hbe hbe-container" id="hexo-blog-encrypt"
+     data-hbe-format="4"
+     data-wpm="抱歉，这个密码看着不太对，请再试试。"
+     data-whm="抱歉，这个文章不能被纠正，不过您还是能看看解密后的内容。"
+     data-salt="07fea27ea07137112a1fd1f0c1f6a173d2a7237ef8151feb96ade8bb4e145f6d"
+     data-nonce="af2639d0ead3c24bcac461c1"
+     data-kdf-iterations="250000"
+     data-auto-save="false">
+  <script id="hbeData" type="hbeData">
+    e1e88a060e893ff7d54762acf08ebe380dacea9666338a0afaec2a0dd70638ee4f77455723a2d3e6dfe685d725af0f7f123abb92e6f5af1257e02c061d99c706d200616d68e3f062ca4003e2e8c0234539c035153ccdda9a377ac0f5864feae03b5c61e5b3436cabcaa0a00ddde9dad3286c67de6a94541307cc296ded1b88766bfe8de43b102b6a152b54f2d6c42e8244bc786824527b5904299b7d37a9a461e42e3e27eef1db6d579af98efe3f543ecd261e9d3c6e20f3af6301c532dcf9974334c6145d571771a403bc4a283ec20d64e5c5bf809cd7c4f378fd90978bc3ece3e24bbf0b078467855a453b2e89fc576deee4291e4ce624e6f593e00c012ac3dc142b1815d575b7a126892a480e73929ba13722f715c115540f642149f18d028712e5b118931ed93c68da87de74f0fed7c26f68fce497f250adea238a25a9552e3a17b8f7467deb07bb81d1f0a9b2582eb720e0115ef3b2a9aaba896727d38717746ca0c3d9084ebbb036c8aea246639fc47608a0f02d522b62eff417f4b2dd5cb1de41c5b015ec0698d1066da90a4039fab00a280eb7e7da5c294d41110510911dc08ae13cc2c83db4153973db09fe6a57541d2ad04bf9927eabfeb6bf1b75ec4d839c84b129d42f4fe73b027ad4d2adfd8ae3c8fee1e4d0e79b69a73928625debd13ddc630859506dcb0724e84d559d83313ef1279aa355050c45dfa5103c511e7017d78cc5bf73ab3a9ca0df913c79f0ed513a741b7ea6415921acd8e7f68c8b31ef9214796a292a9fce4e97fc4f492130ce7e0c88bfd35bc88d41c979d8b63c9125df047dd60d7b19d0ef2e22494b9f73a08e2b6bdd80420068ca4d5a3da3d90f60d50ce98cae7eb836f6a280b1a75a811c2b99a4d6a32aac24b24191322f0764dc2e96354ed41390f32b30a3d481a1579e6700c051c419fd5f84d1fb09793aba03ff48fefb7cb3924b2a4fd0593a010f6a7dcc3d4964a1d68e30043dbf82aa1e765f06e3f79fddab8c8495a7be334e8cebdac381a43aaff47137b71947137638ec80bc4c841a1bad188b618e650f8cce47240a334a93107564f2b36f775838af82d84f1d9b855bce16ca6e9a997f55318994634e809d9f1ab7d5ca0776c7b540d22f92edbf4f1c20ba2d43dcdd40d2d6235dc8aef6d048198cdff3ed7a4669772d7c3d90b0b352295eb6eac0a9a6a3e7f0fc2cc05b27c77a4eb19beb9a180024aa3e8950cdd47829f40d236a9d662c567d839c85345d2e111b8b2f50501e6eae0df7375e11c74c497fca9a266676c892e72232607a2c8a049fa207642c63e8bbf4773ebcaf8f9d0df2f97afbd4eb7c690c40f7ccc33214f33e784ba210f8c3502bf51a2346116677e9344195eb29515688ed5b977422286e911a94f621a051f4929bf9c8111c52dc0dafd61881db6ea87c1712b124b9caecd68913fd14033a091fb2ea8cf04b3d80077780cbf29f4246a60371a2500465c0ca32202cc7013b594458f4d79a7c92f67612a67e7fb5d5d6b1003c59f208963fe8ad0c6e6a9b78302de33a8751e36de6b158baaf72add163cfb2ab6f64971f3efdc9a90330b6ec2380e0df2a44f593e166860dbfc5406bd62877277392ba52e5e9c605f745ef89b924bab3ddd9f8af838d1b7234a00fe7b8f6dab0fe87342ce53d0c46ef32f421f8d9f5647ca4fb6823e515bfad185e48592f5680c8e52f2488f6a6c0915626f3f6489a7c0d1f1c586a2852a7589eed5f89e55605b9deff9104e2ab5e0ccac5f2740a231d3d3f26142f3c4c496b0be91c6f47b49885bcc7f1fbb10653f435ab96e743108206aea5c015ad09910d708cb7bcbe75f0c2ccf9f8c838c4d0f9a3865b75409b4b658ece848ffae9d7d1484e64dede1ab9e27b1840effd950abe56c83e3ea8114b6219bc57a459c211f41a044efeec22bc4a2a21bcdb3400f08e013b15df4c7968051572fb4bd232593eb6921ace30ae5bed14dfcc67c7c2046614cdcd7dd5b0e91c45aee3b58554c08ccd0dd98f577bbfc62f98df243d12f14ced527f4e0bd51f9085f5547e1a6615a3728d5a7031e272c41083b0c59bdbf8f3d7bf2dca76480b1b66853352a03e326551367ab31f339cf15afffeecf3c75f9057b95f9b680225abd616c83a483e5d183ca4b3c7859dd41cdaa303731e9d7ea2986253100835248f1b200eb3ae436af623894bbf6890a2f941873fd84f0f472c6bea3c00c0e83260b8041c9d2839369626beef0fb104bcacb0be6d13b591f56f308db46d9d84d46cc2216c51d2e6054f2c97161b935bffb88bd37ba5792b06799bcd1bf81163625d14ad33474a3c518d372feaf383f99dcb72d318cb5036beb59574f7fce6930296b985bc83b46a87885fe6bd149a2886e363f27bf02d3bca74052ef45b8513647e6dc2a12f811e3cd057c61d5f2d9ff387b7460b86e76ad85e0659f4bee000c1e5a9bcb6059362e3687d19b389f9cada4781ae4cf25e97e32dd3c70fffdfc0cc5264ae4a1199685982826e5a9190e9cf677b018ccebcecfe9512bc9e8998cccf93c702ba33cb6809086744b7ad55c59e953008586922d2c9d54bcbf6f20d03782f86f0d1d897d21b3499101f80dfde3b39d0b5f435a2114cc34fc175d9caf128098eca6508cce9e3a786c9ffe440fe8c8f6e9e238fd32c059258d5133a62d643f904af84965f819632bf20bcc4179dc0c3c9aacfc138d071163162754b3462083018bc42808130d4d9b7bf99c6352a031b464bfe48747d3d776980e8b40161a9d7a8276d603eac36314362991f38c52d0ae86f24429a0f6efc134e94429d4c59afb3a112cdca77cfdca49e05fc183c14b62e382ae3f7a902ae89e0832a6c2d118d04e3f612cd1176af0b5b20dddc940b8ad21ea183b6f949778afde7e40615d8da465cfb9a87f1ee377bb27b5d6183dd5b898b38b545e43e70ad4883534df3c3fe63b55c57ce24d7f7c2c4e424ed686253e4078a25ccdb36bfe8bb1eea07483c17fcc3465572cbcbf713bf9ad19a6e8013cf9df6c1e4ebc5640e768aa57a3c2c2249d47bda1af548d0f28952fd290c039984d67c40e48f33200db97e52171ff5a883233af8a54f99b4ca6777d3df1d3bb99f581a06b862a8e9649de3f6702e190202293132b6eb22d856e93cfcccb3e5d6146713be99194cf7806e0b32c2be7a9c4fa1ab48338176f92272f0f8e04f2db96fbc927c8a867dcba6b5d8efe314f222714ee0458259cc742c8fdab4a73ecc42d9dde893cb763b02c3080c3b906692686df3d7dd0b53d472f256bc972f2661ba12a43fb336f3d097b2bb2aed686138a287dfef5b86128c78307fd549fcb08f3c5829960dcfec6839786007b673ef70facea7896c5d32637d872741fcfec1766290f24b5569778ba4f6d093c7eb0cac04100cf4d5061ea24d5b228fcae1be2eb66b10377a996a9fa296c3bc70097079f5dbc11056da792eb98341dfb6fca84c6da3cfbe6802bcb62444b30e1a6c130a4856c29c6a3ea779df26e676737cbaf2efd3803de2fa94f7421e846e9a085e7a6ef3f18463a80c3d17d8d4894f1b17772809af8049264481e4f58730ea62a2d3027edb194b148ee12c3574650253f5792fa57e5e75441d8ff81d856f3950c53828c7794cb9ce3b60cf4f9183dc008e2fb2fe0533c8b20610c5bf8de9ca66d113fb8ce8bfe75ece6c566752bb4b2bd8c3232cb9c803b6b326c7b0aa965fa66c82ea9e67db3d0670a13e3e9e9a3e9869331c398078f3cec61ae9f519335a31aa8326f0ec36be72ff6a1c7b9ac46ca0738fe8d5e7c8e7b019e8d85ac65b93d67110c5840712875f7c58911893efde800176028a0872abfde5191eecafda85eaa6cc78ec9726521de29a2f04fb54548d979272a34ef77ce4347bc0a9ecc35f76c6182b20d6a126e33f558a86c892dc95be2e4988ef6ebf785a24a347690607405381385cb327141fa3c102f023defa832a9b676758281131710ed605104f5c00f0b9785492b94b16c2b3c3af22586fad3e1c8f204a6ea65ac4851e20ba8cbca8720fb5edbb03569d1fd0fab08580975e9e29037c7000d0a314100c9eabbafb9dca98ce14ab205b0eda868d35f180ff546d4c787947f1a5f002c863e6585d12942b59e4d535ef9d26736e382435363f01a18ac057787f696bd8598ac7c0768d9d6a04a446492a43d62247decee747c266aa7876f58850bbb299cfe5c8892394146b3746b6667f910718bd8c314c4559858e257d12d7950227c8265ca0d7fd81fdce994c5681a4f2dee09c5d6651449f4693604f7ea1b5b248743bbf42f5ddada3f11b6000e855285abde63ee348ffec8920c422a66f5266f9300eed9f0791490e027e8ecf756c7cca11bf44bae8f5bab2b0cb01cd35984f4c541606b711bd102e7da97915ea6f4250e1c5b4b534dc3a81dc715598d3ee4debf91d99bb19d74f4170b668a89aa1270ec001bdee74df6099535da07128ff50ac60e1b7578e226755b1c7c185f186d5aeda993d8962fba444ac61498ebcbff51426a78580e5bee263ad15525ee1ad1efa6baa497b23af7906fcba43753a5ce125f65723aadb4ed99a10441a64fe9365b040e776c18e441b395d64d5699a437c10e7febed6951892b0aab39894d93db7ec95890b104eb6c2385bf70a336452526734667386d0237a4ef451cb8aa58f914bb7924830078f5afe1167c7d3b8ac8eefc3f8bb25587df729439727cd370e719aef20a6e317f5e700908907417d6e1643a22914b2730860afa969bfccaa25abd78e5c215da1a7344d42cf7d51500ad148f0acd18272b818e27525c31781c901372abdeb8da27ecea35af0740e85944290f7949811a1d7663045cfaefd70f4b309c31f1ad58015c7e8ea29bc6ee49183b6cb6f472253ef782f4afba089c494db54af8289298386edbdfb97cee92318755519bdec75532fc5fcbb778b20b6ba21d119499ae8d63e530047907cf49c2a85a41a1a8617d7b87984a658cdfa6d93ae38174c5d4e09a41e5992c6d6ab391628c0c7edb491df6dca34d67fecdce0309db400827cc8ae7dae1b9044833b9251993e02cc4f33ad86b1dddc6f99c58ee3977eddb4bad6c24cf83b4caff3c5757e0f9b1eaeaa12a893027f0f5699f008b0ade22d1fb01e6436352a24de1bb011303c95ba4ee6646b13392983a2e8caac9dcae2913884b002670b10a83955d99631112bc48fa5f1ea69cfa13c657346ca8cc81d9a36af9ef193bba754d2ad56ba61e6bce656bbf7658888e1dabfc429cca35e79826e3e6f6333517146bc02d91320b9a1532707ab60de30e26be0e957329460065e85934059b22806b9349ba542e1abd4286daced2e4a2563a3a7c56ad2f12231910229aa6f45e8948cc39aca9277f9320bacce6ef4f63868aae32da1e9d682843da4bab49169f149d47e310cdabf33166877b14c489757272440a4ab4bdfe48f0d4866d2384c32ab7c189776823e7955b9036d3a388d05ef158dfcf96a92bdd6c28bf54183f5bb3822d4896c2eed88a0e1a4d70dfcb915decda549bbc0e4d16e6ee4c30c24beba53deb6ed4aa0265741ac7c37500cc8699de46b97dfd4e43f4d4df47bc40936eae1480557f527266b87d3901d0f0148588eae31476fd1408655bf92866e29e5bdb7927702f662f8c9f917fc7e8326bb684e43d0ddf295bfa7c3696895fcc4e261235a7676536870706b05d55f4dbe2e6cf804bc8d0cb25eb1badd7b5b684b31c9564913fd95d886c611cf7cceef04da52c4e99b8e77041ae115d8fdd6dcd9b79f00e8efbd6574972b728f46632a6f7c6361ed71f047c7c69702fe7837a8c04f72d8aeac9e49dafaf10d8d290f1200249b8154e6511ae1d681693eabfa4989adacedd10eb1707c54d37b41d3d10beee9714d47353b51843c9c90889ee7cac79a6e203f3783fb184eab19ad4e66dce32911a4a8ee7ab60062ff4cdc6a2e81fbf858fbf23c1be0a8080afc4f5a46e1f384650391871393f9a50c9297a67f1fcc871e1b319731f8547eba6e0d230258925b22e70fe8d3f273c82abe0f00eccd017430937344234abe4551a60725e53c53420e74ce7b6e34c09bcc43f6ba0cc979d56f4334abb83af1117c1922928c6286d068a80a578cac7cfbef889032e231d5c7b8a4c1dbb3b64f382a1c220e7a83d7832e06a18c60e2ab4c17323594e64f5f64d0791dcaa1908fafc054a21fb353898b6cbe3f19132e543a209dde46bcef847b7e7e0b311f3b9dd7295b44cb5f28094a25d121ae982a4590fa5e3abb946758e3aebe7c1d19c2fdebe4dd381d7105f500f9eb64f35d86b721689553bd8bb58cd39c057ad8a977b8dbb99396eff9f4e9dd882f078b0825cee004381ae8f2b0311492e975e6126253702014c4e8d147472d25a5c2eff8c0b95ac63f27a6b998359d8e84a4e7b1548dcfa1229b6fce62826271de55deac3597ea2a03679097efa418f02a7643ffe2f935a8d11c973f8a34ef2a26baa6c81d2f7008f16a846120c4b60b526f9233117bf3bb7e7f65ff93b348565610d220269824f24dd36195106175aa3477228299e9fd687bb698473376f9863124fb3ab852f42985510a29fb0d365b6f9d4c6e77b9e85bbe6896739ffd8cfe33995a368c96bde2be13c2d39782e9fb8a1bfda99613799f60a55d5f13a7f8042a73b41a9dcbe1a905d75850da927c2c16a6943d4d84f4051323d4bd3d3d02be6c7e6d622d0292e9935f2e91b2298c6d1aea185c35d4a6ab08c3109459697aed2f2c4a3a29f50e35f11e92b1c3cf51040106aed3a95ad541a39074422c716de9a220021b4dfd48438969d5ea2f19aa536f593bcddd37f4e1e1064afdd31950e6ff2ab65ad6ed956dae7c72b4f543c278a61c95e881fa60682a8613a1e1ce97d0e78ac905cc7dd8b94ef8eb53b3d0580b9cfdd2507238e915495cca5ff8316c8b9da8512d195d6a876b52383850e7a211b10e8380aca4e45b8fca3ad1765c44e0007392e47a1d3bba091943b1e6963e8e1c8f46d40aba0f6359bdea79a95a8b164e22fabc55cd4951cd48f8602b617f906628f8b7eb9c9f188bc4834c1c15854056b960ee270d9b57915b76028996c5b7b4af268094fb08f93d52a36b779acfa8675a6d6aa102dc602c75196276cb82095ff3df3168495215def06c2e45698a8b51d32ebeaa1009f4cd678b81f3d966d31fdd317c65ee72405ae259cba9d10b7b2387ddbb56c94eed5c931a9e41fef730752803d6fd77d9210653be3663ca02150c889db55f2362cea02692ff682f466e8e5f983fdc38cfd4fa12f544ace5e74ccb9b7e88f7619e50fa409f5d31b9a1b4bcde14fca2bd81bb80b4637642df4325a84ba794f527f5518582512098057aba19cf5828845c4e609aec67f56b449f7d361eaea028875637aa9f3e9cd1f520a94c6d0fa1d8ba5704466e456fdeb127d6b2e281acdea8e6ea911bdabec61bf22303802b9fed91bbfcdaa95dfe4328363cdc011879a1534110496f150df913afeb69d1d4a76c45680f119387611bcb3e7c548c46fbf8bacbc280564d7239f672fa975d9e1d865ca74c7cf4d61162c35e65840503e663f4f709e21daf11c25b99cf6e365c012b2141d14aa7d183d6faeff79aab61e0fdf28e3797de2cf854e868d5ebd90ad4080147427575515570c556eebb1f2944a684be5347212625e988f0a6517a3e8595a308d99762db870f961f974fc79ad79dcebd0ec343486d48c90b0183
+  </script>
+  <div class="hbe hbe-content">
+    <form id="hbeForm" class="hbe hbe-form">
+      <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">您好，这里需要密码。</span>
+      </label>
+    </div>
+      <button class="hbe hbe-button" type="submit">Decrypt</button>
+      <div class="hbe hbe-error" role="alert" aria-live="polite"></div>
+    </form>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.a3b9f59caa.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css"></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="https://blog.lambert.wang">Lambert Wang</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="https://blog.lambert.wang/2021/10/26/20211026-Some-thoughts-on-Chinese-and-American-culture/">https://blog.lambert.wang/2021/10/26/20211026-Some-thoughts-on-Chinese-and-American-culture/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles on this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless otherwise stated.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E8%8B%B1%E8%AF%AD/">英语</a><a class="post-meta__tags" href="/tags/English/">English</a></div><div class="post-share"><div class="social-share" data-image="/images/avatar.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related  no-desc" href="/2022/01/01/202112310-retrospection-and-prospection/" title="2021/2022, Retrospection and Prospection"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info"><div class="info-1"><div class="info-item-1">Previous</div><div class="info-item-2">2021/2022, Retrospection and Prospection</div></div></div></a><a class="pagination-related" href="/2021/10/12/20211012-Hello-World/" title="Hello World"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">Next</div><div class="info-item-2">Hello World</div></div><div class="info-2"><div class="info-item-1">So I applied the new domain name lambert.wang. This is just a greeting post. </div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/images/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Lambert Wang</div><div class="author-info-description">Lambert 的个人博客：记录生活、思考与学习。</div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">22</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">2</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/lambertdev"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/lambertdev" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:lambert.q.wang@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a><a class="social-icon" href="https://space.bilibili.com/434079867" target="_blank" title="Bilibili"><i class="fab fa-bilibili"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">记录生活、思考与学习</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/11/23/20251123-Apart/" title="分离的碎碎念">分离的碎碎念</a><time datetime="2025-11-23T12:00:00.000Z" title="Created 2025-11-23 20:00:00">2025-11-23</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/07/27/20250727-Juan/" title="卷和碎碎念">卷和碎碎念</a><time datetime="2025-07-27T08:11:00.000Z" title="Created 2025-07-27 16:11:00">2025-07-27</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/04/04/20250404-maopao/" title="冒个泡">冒个泡</a><time datetime="2025-04-04T12:00:00.000Z" title="Created 2025-04-04 20:00:00">2025-04-04</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/01/29/20250129-happy-CNY/" title="蛇年快乐">蛇年快乐</a><time datetime="2025-01-29T02:00:00.000Z" title="Created 2025-01-29 10:00:00">2025-01-29</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/01/11/20250111-think-read/" title="一些思考">一些思考</a><time datetime="2025-01-11T07:30:00.000Z" title="Created 2025-01-11 15:30:00">2025-01-11</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Lambert Wang</span><span class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Reading Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading Database</span></div><div class="local-search-input"><input placeholder="搜点什么吧" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=5.7.2"></script></div></div></body></html>
