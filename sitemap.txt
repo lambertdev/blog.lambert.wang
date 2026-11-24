@@ -26,8 +26,8 @@ https://blog.lambert.wang/categories/index.html
 https://blog.lambert.wang/2021/10/12/20211012-Hello-World/
 https://blog.lambert.wang/about/index.html
 https://blog.lambert.wang/
+https://blog.lambert.wang/tags/Life/
 https://blog.lambert.wang/tags/%E8%8B%B1%E8%AF%AD/
 https://blog.lambert.wang/tags/English/
-https://blog.lambert.wang/tags/Life/
-https://blog.lambert.wang/categories/English-Study/
 https://blog.lambert.wang/categories/Life/
+https://blog.lambert.wang/categories/English-Study/
